@@ -1,0 +1,23 @@
+<h3>The Query editor/builder simple Demo for supporting auto complete</h3>
+<hr>
+<ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="code" (onInit)="onInit($event)"></ngx-monaco-editor>
+<div class="help-text">
+  <h3>Boolean operators will work as follows:</h3>
+  <ul>
+    <li>Quotes: searches for mentions that meet the exact phrase</li>
+    <li>AND : searches for mentions of 2 keywords together on a page</li>
+    <li>OR: searches for mentions of 1 or the other keywords on a page</li>
+    <li>NOT searches for mentions of a keyword on a page and will return the page as a match if the other keyword is not mentioned
+      on that page
+    </li>
+    <li>Brackets: used to organize logic around operators and keywords for compound queries</li>
+    <li>NEAR/ x: search for a word or set of words within an x range of each other using the format “(a OR b OR c Or ...) NEAR/x
+      (d OR e OR f OR ...)”</li>
+    <li>
+      The native “~” (typing tilde) proximity operator would still be available for all other cases
+    </li>
+    <li>
+      And other operators such as: <span class="note-text">hashtags, continent, country, state, county, city, site, url, title, author, links and wildcard (?, *)</span>
+    </li>
+  </ul>
+</div>
